@@ -1,4 +1,5 @@
-<%= form_for(@idea, :html => {:multipart => true}) do |f| %>
+<%= form_for(@idea, :html => {:multipart => true, :class => "form-horizontal"}) do |f| %>
+  <legend>Provide more information about your idea in the following form</legend>
   <% if @idea.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@idea.errors.count, "error") %> prohibited this idea from being saved:</h2>
@@ -10,20 +11,30 @@
       </ul>
     </div>
   <% end %>
+  
 
-  <div class="field">
-    <%= f.label :name %><br />
+  <div class="control-group">
+    <%= f.label :name, :class => "control-label" %>
+    <div class="controls">
     <%= f.text_field :name %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
+  <div class="control-group">
+    <%= f.label :description, :class => "control-label" %>
+    <div class="controls">
+    <%= f.text_area :description, :cols => "30", :rows => "10" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :picture %><br />
+  <div class="control-group">
+    <%= f.label :picture, :class => "control-label" %>
+    <div class="controls">
     <%= f.file_field :picture %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="control-group">
+    <div class="controls">
+      <%= f.submit :class => "btn btn-primary" %>
+    </div>
   </div>
 <% end %>
+

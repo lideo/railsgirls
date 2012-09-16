@@ -1,4 +1,4 @@
-## Railsgirls
+== Railsgirls
 
 Followed the Railsgirls tutorial for creating a Rails app for the first time.
 

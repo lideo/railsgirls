@@ -1,3 +1,9 @@
+## Railsgirls
+
+Followed the Railsgirls tutorial for creating a Rails app for the first time.
+
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
